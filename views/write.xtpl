@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  body{
+    background-color: #075498;
+    width: 80%;
+    margin: 0 auto;
+    color: #fff;
+  }
+  .mb{
+    /* margin-bottom: 50px; */
+  }
+  label{
+    height: 50px;
+    line-height: 50px;
+  }
+  button{
+    width: 150px;
+    height: 40px;
+    background: #ccc;
+    border: 0;
+    float: right;
+    color: #000;
+    margin-top: 10px;
+  }
+  .container {
+    margin-top: 30px;
+    position: relative;
+    height: 200px;
+  }
+  .container .avater {
+    width:  100%;
+    height: 200px;
+    z-index: 999;
+    position: absolute;
+    opacity: 0;
+    border:none;
+  }
+  .container .photo {
+    width:  100%;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:none;
+  }
+  .photo[src=""]{
+    opacity: 0;
+  }
+  form input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  form label{
+    float: left;
+  }
+  .content {
+    margin-top: 20px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="file" name="avater" class="avater">
+    <img class="photo" src="/images/01.jpg">
+  </div>
+  <form target="_blank">
+      <div class="mb">
+        <label>标题</label>
+        <input type="text" name="title" class="title">
+      </div>
+      <div class="mb">
+        <label>摘要</label>
+        <input type="text" name="jianjie" class="jianjie">
+      </div>
+      <div class="mb content">
+        <textarea id="ckeditor" name="content" class="txcontent"></textarea>
+      </div>
+      <div class="mb">
+        <button type="submit">发布</button>
+      </div>
+  </form>
+  <script src="/libs/ckeditor/ckeditor.js"></script>
+  <script>
+    CKEDITOR.replace('ckeditor', {
+        toolbarGroups: [
+            { name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
+            { name: 'forms' },
+            { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+            { name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
+            { name: 'styles' },
+            { name: 'colors' }
+        ]
+    })
+
+    var limg = ''
+    document.getElementsByTagName('form')[0].onsubmit = function() {
+      for(var ins in CKEDITOR.instances) {
+        CKEDITOR.instances[ins].updateElement();
+      }
+      var data = {}
+      var form = document.getElementsByTagName('form')[0]
+      data.title = form.getElementsByClassName('title')[0].value
+      data.jianjie = form.getElementsByClassName('jianjie')[0].value
+      data.content = form.getElementsByClassName('txcontent')[0].value
+      data. img = limg
+      if(!(data.title.trim() && data.jianjie.trim() && data.content.trim() && data.img.trim())) {
+        alert('请填写完整内容')
+        return false
+      }
+      var xhr = new XMLHttpRequest
+      
+      xhr.open('post', '/admin/write')
+      xhr.setRequestHeader("Content-type","application/json")
+      xhr.send(JSON.stringify(data))
+      xhr.addEventListener('readystatechange', function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          var info = JSON.parse(xhr.responseText)
+          console.log(info)
+          if (info.status == 200) {
+            alert('添加成功')
+          }
+        }
+      })
+      return false
+    }
+    document.getElementsByClassName('avater')[0].onchange = function () {
+      var file = this.files[0]
+      var data = new FormData()
+      data.append('avatar', file)
+      var xhr = new XMLHttpRequest
+      xhr.open('post', '/profile')
+      xhr.send(data)
+      xhr.addEventListener('readystatechange', function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          var info = JSON.parse(xhr.responseText)
+          if (info.code == 10000) {
+            limg = '/' + info.path
+            document.getElementsByClassName('photo')[0].src = limg
+          }
+        }
+      })
+    }
+  </script>
+</body>
+
+</html>

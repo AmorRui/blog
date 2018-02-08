@@ -1,0 +1,33 @@
+{{extend ('./layout')}}
+{{{#block ('article')}}}
+	<article>
+		<div class="container">
+			<ul class="cbp_tmtimeline">
+				{{#each (data)}}
+					<li>
+					<time class="cbp_tmtime">
+						<span>{{this.mounth}}-{{this.day}}</span>
+						<span>{{this.year}}</span>
+					</time>
+					<div class="cbp_tmicon"></div>
+					<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s">
+						<h2>{{this.title}}</h2>
+						<p>
+							<span class="blogpic">
+								<a href="/">
+									<img src="{{this.img}}">
+								</a>
+							</span>
+							<span class="ocentent">{{this.jianjie}}</span>
+						</p>
+						<a href="/many?id={{this.id}}" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</article>
+{{{/block}}}
+{{{#block ('css')}}}
+  <link href="/css/index.css" rel="stylesheet">
+{{{/block}}}

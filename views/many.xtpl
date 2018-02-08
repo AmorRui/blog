@@ -1,0 +1,38 @@
+{{extend ('./layout')}}
+{{{#block ('article')}}}
+	<article>
+		<div class="container">
+			<div class="content">
+				<ul>
+					<li class="atitle">{{data.title}}</li>
+				</ul>
+				<div class="contenttwo">
+					{{{data.content}}}
+				</div>
+			</div>
+		</div>
+	</article>
+{{{/block}}}
+{{{#block ('style')}}}
+	<style>
+		.atitle {
+			font-size: 18px;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+		.data {
+			font-size: 16px;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+		.newsnav {
+			margin:20px;
+		}
+		.contenttwo {
+			text-align: center;
+		}
+	</style>
+{{{/block}}}
+{{{#block ('css')}}}
+  <link href="/css/many.css" rel="stylesheet">
+{{{/block}}}
