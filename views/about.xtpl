@@ -3,27 +3,27 @@
 <article>
   <div class="container">
     <div class="banner">
-      <p data-scroll-reveal="enter top over 2s">我们不停的翻弄着回忆，却再也找不回那时的自己</p>
-      <p data-scroll-reveal="enter left over 2s after 1s">人生，是一场盛大的遇见。若你懂得，就请珍惜。</p>
-      <p data-scroll-reveal="enter bottom over 2s after 2s">无论下多久的雨，最后都会有彩虹；无论你多么悲伤，要相信幸福在前方等候.</p>
+      <p data-scroll-reveal="enter top over 2s">等我长发飘飘 等我把愚勇熬成温柔 等我褪去稚嫩矫情 </p>
+      <p data-scroll-reveal="enter left over 2s after 1s">等我甘于平凡 等我不再把爱夸张到声嘶力竭 等我不再似如今般模样</p>
+      <p data-scroll-reveal="enter bottom over 2s after 2s">我决定改变 我保证宁缺毋滥不把自己贱卖 我保证不再挂念旧人 我保证把完整的自己嫁给我最美好的未来</p>
     </div>
     <div class="memorial_day">
       <div class="time_axis"></div>
       <ul>
-        <li class="n1"><a href="/">A</a>
-          <div class="dateview">2013</div>
+        <li class="n1"><a href="/">星座</a>
+          <div class="dateview">双鱼座</div>
         </li>
-        <li class="n2"><a href="/">m</a>
-          <div class="dateview">2014</div>
+        <li class="n2"><a href="/">爱好</a>
+          <div class="dateview">旅游</div>
         </li>
-        <li class="n3"><a href="/">o</a>
-          <div class="dateview">2015</div>
+        <li class="n3"><a href="/">性别</a>
+          <div class="dateview">女汉子</div>
         </li>
-        <li class="n4"><a href="/">r</a>
-          <div class="dateview">2016</div>
+        <li class="n4"><a href="/">喜欢</a>
+          <div class="dateview">敲代码</div>
         </li>
-        <li class="n5"><a href="/">DR</a>
-          <div class="dateview">2017</div>
+        <li class="n5"><a href="/">会更好</a>
+          <div class="dateview">2018</div>
         </li>
       </ul>
     </div>
@@ -31,12 +31,22 @@
       <h2>Just about me</h2>
       <ul> 
         <p>念念不忘,必有回响!</p>
-        <p>一枚程序员,现在还停留在码农阶段,写此博客是为了记录学习的历程和生活中的感触, 希望能与大家共勉</p>
+        <p>轻度强迫症，对前端开发及其热爱</p>
+        <p>喜欢看杂书，性格开朗，喜欢交朋友，喜欢出去看看，重度吃货患者，重度可乐依赖症，体重超标，正在减肥</p>
+        <p>一枚程序员,现在还停留在码农阶段,写此博客是为了记录学习的历程和生活中的感触, 希望能与大家共勉。</p>
       </ul>
       <h2>About my blog</h2>
       <p>创建于2013年05月20日 </p>
       {{! <p>服务器：阿里云服务器<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=8smrzoqa&amp;productCode=vm" target="_blank" class="blog_link">购买空间</a><a href="/jstt/web/2014-01-18/644.html" target="_blank" class="blog_link">参考我的空间配置</a></p> }}
       <p>邮箱 : teng0009@126.com </p>
+      <span class="icon">
+        <a target="_blank" href="http://weibo.com/SunnyAmor">
+          <span class="icon-sina-weibo"></span>
+        </a>
+        <a target="_blank" href="https://github.com/AmorRui">
+          <span class="icon-github"></span>
+        </a>
+      </span>
     </div>
   </div>
 </article>

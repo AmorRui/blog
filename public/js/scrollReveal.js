@@ -1,29 +1,3 @@
-/*
-                       _ _ _____                      _   _
-                      | | |  __ \                    | | (_)
-    ___  ___ _ __ ___ | | | |__) |_____   _____  __ _| |  _ ___
-   / __|/ __| '__/ _ \| | |  _  // _ \ \ / / _ \/ _` | | | / __|
-   \__ \ (__| | | (_) | | | | \ \  __/\ V /  __/ (_| | |_| \__ \
-   |___/\___|_|  \___/|_|_|_|  \_\___| \_/ \___|\__,_|_(_) |___/ v.0.1.3
-                                                        _/ |
-                                                       |__/
-
-    "Declarative on-scroll reveal animations."
-
-/*=============================================================================
-
-    scrollReveal.js was inspired by cbpScroller.js (c) 2014 Codrops.
-
-    Licensed under the MIT license.
-    http://www.opensource.org/licenses/mit-license.php
-
-=============================================================================*/
-
-/*! scrollReveal.js v0.1.3 (c) 2014 Julian Lloyd | MIT license */
-
-/*===========================================================================*/
-
-
 window.scrollReveal = (function (window) {
 
   'use strict';

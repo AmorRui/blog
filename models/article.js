@@ -1,8 +1,7 @@
-
 let db = require('./db');
 
 exports.selectArticle = (cb) => {
-    let query = 'SELECT * FROM article'
+    let query = 'SELECT * FROM article order by id desc'
     db.query(query, (err, data) => {
         if(!err) return cb(data)
         cb(err)

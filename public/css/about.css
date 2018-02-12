@@ -10,9 +10,9 @@
     margin: 30px;
     line-height: 30px;
     text-shadow: #fff 1px 1px 1px;
-    background: url(../images/banner_top.jpg) no-repeat -90px center;
+    background: url(../images/banner_top.jpg) repeat -90px center;
     color: #333;
-    padding: 40px 0 0 0
+    padding: 40px 0 0 0;
 }
 
 /*文字动画效果*/
@@ -307,3 +307,13 @@ h4.atitle span {
 .bt-cs a {
     color: #fff
 }
+.icon span{
+    font-size: 40px;
+    padding-right: 20px;
+}
+.icon-sina-weibo:before {
+    content: "\ea9a";
+  }
+  .icon-github:before {
+    content: "\eab0";
+  }
