@@ -8,7 +8,7 @@ const db = mysql.createConnection({
     user: 'root',
     password: '',
     port: 3306,
-    database: 'newblog'
+    database: 'blog'
 });
 
 db.md5 = md5;
