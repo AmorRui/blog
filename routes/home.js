@@ -24,9 +24,9 @@ home.get('/many', (req, res) => {
     })
 });
 
-home.get('/aaa', (req, res) => {
-    res.render('aaa')
-});
+// home.get('/aaa', (req, res) => {
+//     res.render('aaa')
+// });
 const path = require('path');
 const multer = require('multer');
 let storage = multer.diskStorage({
