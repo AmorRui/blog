@@ -1,8 +1,10 @@
-
 const express = require('express');
 
 
-const { selectArticle, selectContent } = require('../models/article');
+const {
+    selectArticle,
+    selectContent
+} = require('../models/article');
 
 // 创建子路由
 const home = express.Router();
@@ -12,6 +14,7 @@ home.get('/', (req, res) => {
         res.render('index',{ data })
     })
 });
+
 home.get('/about', (req, res) => {
     res.render('about')
 });
@@ -19,8 +22,12 @@ home.get('/learn', (req, res) => {
     res.render('learn')
 });
 home.get('/many', (req, res) => {
-    selectContent({id: req.query.id}, (data)=> {
-        res.render('many',{data:data[0]})
+    selectContent({
+        id: req.query.id
+    }, (data) => {
+        res.render('many', {
+            data: data[0]
+        })
     })
 });
 
@@ -46,7 +53,9 @@ let storage = multer.diskStorage({
     }
 })
 
-let upload = multer({storage: storage})
+let upload = multer({
+    storage: storage
+})
 
 
 home.post('/profile', upload.single('avatar'), function (req, res, next) {

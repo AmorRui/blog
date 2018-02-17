@@ -26,6 +26,7 @@
 				{{/each}}
 			</ul>
 		</div>
+
 	</article>
 {{{/block}}}
 {{{#block ('css')}}}
