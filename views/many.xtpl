@@ -11,7 +11,38 @@
 				</div>
 			</div>
 		</div>
+
+			<!-- 广告位 -->
+			<section>
+				<hr><h5><a href="/about">ABOUT ME</a></h5>
+				<div class="short-about">                     
+								{{! <img src="public/images/avater.jpg"> }}
+								<p>  我行过许多地方的桥，看过许多次数的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人。</p>
+						<!-- SNS Link -->
+						<ul class="list-inline">
+						 <span class="icon">
+							<a target="_blank" href="http://weibo.com/SunnyAmor">
+								<span class="icon-sina-weibo"></span>
+							</a>
+							<a target="_blank" href="https://github.com/AmorRui">
+								<span class="icon-github"></span>
+							</a>
+						</span>
+						</ul>
+				</div>
+					<div class="widget hot">
+					<header>简介</header>
+					<ul>
+							<li>
+								<a href="#" target="_blank">
+									<p>{{data.jianjie}}	</p>
+								</a>
+							</li>
+					</ul>
+			</div>
+		</section>
 	</article>
+	
 {{{/block}}}
 {{{#block ('style')}}}
 	<style>

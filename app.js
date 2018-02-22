@@ -13,7 +13,7 @@ const admin = require('./routes/admin');
 const app = express();
 
 // 监听端口
-app.listen(3000);
+app.listen(3001);
 
 // 配置模板引擎
 app.set('view engine', 'xtpl');

@@ -18,9 +18,6 @@ home.get('/', (req, res) => {
 home.get('/about', (req, res) => {
     res.render('about')
 });
-home.get('/learn', (req, res) => {
-    res.render('learn')
-});
 home.get('/many', (req, res) => {
     selectContent({
         id: req.query.id
@@ -31,9 +28,6 @@ home.get('/many', (req, res) => {
     })
 });
 
-// home.get('/aaa', (req, res) => {
-//     res.render('aaa')
-// });
 const path = require('path');
 const multer = require('multer');
 let storage = multer.diskStorage({

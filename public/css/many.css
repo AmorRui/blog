@@ -1,6 +1,48 @@
-
-.container{
+.container {
   padding: 20px;
   box-sizing: border-box;
   border-radius: 5px;
+  width: 70%;
+  float: left;
+}
+
+section {
+  float: right;
+  width: 26%;
+}
+hr {
+  margin-top: 20px;
+margin-bottom: 20px;
+border: 0;
+border-top: 1px solid #eee;
+}
+
+.short-about p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+    margin-bottom: 30px;
+}
+.list-inline a:hover{
+    color: #000;
+}
+.icon span{
+  font-size: 40px;
+  padding-right: 20px;
+}
+header {
+  font-size: 30px;
+}
+.widget ul li {
+  width: 80%;
+  height: 100%;
+  padding: 5px;
+}
+.contenttwo {
+  text-align: left;
 }

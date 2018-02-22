@@ -305,7 +305,10 @@ h4.atitle span {
 }
 
 .bt-cs a {
-    color: #fff
+    color: #fff;
+}
+.icon a :hover {
+    color: #000;
 }
 .icon span{
     font-size: 40px;
